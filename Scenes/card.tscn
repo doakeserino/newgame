@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dtjryr6svwuga"]
+
+[ext_resource type="Script" uid="uid://djry17776tmmi" path="res://Scripts/card.gd" id="1_0qqmn"]
+
+[sub_resource type="Gradient" id="Gradient_gmcdd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gmcdd"]
+gradient = SubResource("Gradient_gmcdd")
+width = 200
+height = 300
+
+[node name="Card" type="Node2D" unique_id=2093167092]
+script = ExtResource("1_0qqmn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=588431075]
+texture = SubResource("GradientTexture2D_gmcdd")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dwddpc4ch3ty5"]
+
+[ext_resource type="Script" uid="uid://bkcnsx5i1u1jd" path="res://Scripts/fire_card.gd" id="1_vh3db"]
+
+[sub_resource type="Gradient" id="Gradient_gmcdd"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gmcdd"]
+gradient = SubResource("Gradient_gmcdd")
+width = 200
+height = 300
+
+[node name="FireBaseCard" type="Node2D" unique_id=2093167092]
+script = ExtResource("1_vh3db")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=588431075]
+texture = SubResource("GradientTexture2D_gmcdd")

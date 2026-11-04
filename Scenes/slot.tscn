@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://deogxk2at2t7q"]
+
+[ext_resource type="Script" uid="uid://dlcf4lhgd7r37" path="res://Scripts/slot.gd" id="1_luhj6"]
+
+[node name="Slot" type="BoxContainer" unique_id=1766675901]
+custom_minimum_size = Vector2(200, 300)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_luhj6")

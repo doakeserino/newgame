@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dm80yh7q88bjk"]
+
+[ext_resource type="Script" uid="uid://clbb4bns3l1g5" path="res://Scripts/cards_hand.gd" id="1_2gxi5"]
+[ext_resource type="PackedScene" uid="uid://deogxk2at2t7q" path="res://Scenes/slot.tscn" id="2_7n83j"]
+
+[node name="CardsHand" type="HBoxContainer" unique_id=1062482710]
+custom_minimum_size = Vector2(200, 300)
+offset_left = 360.0
+offset_top = 680.0
+offset_right = 1560.0
+offset_bottom = 980.0
+script = ExtResource("1_2gxi5")
+
+[node name="Slot1" parent="." unique_id=1766675901 instance=ExtResource("2_7n83j")]
+layout_mode = 2
+
+[node name="Slot2" parent="." unique_id=1805867563 instance=ExtResource("2_7n83j")]
+layout_mode = 2
+
+[node name="Slot3" parent="." unique_id=909389999 instance=ExtResource("2_7n83j")]
+layout_mode = 2
+
+[node name="Slot4" parent="." unique_id=1173250426 instance=ExtResource("2_7n83j")]
+layout_mode = 2
+
+[node name="Slot5" parent="." unique_id=691420995 instance=ExtResource("2_7n83j")]
+layout_mode = 2
+
+[node name="Slot6" parent="." unique_id=2062950223 instance=ExtResource("2_7n83j")]
+layout_mode = 2

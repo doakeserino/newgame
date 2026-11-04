@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dv4neulvk8s0g"]
+
+[ext_resource type="PackedScene" uid="uid://bi68jp3snbrs5" path="res://Scenes/map.tscn" id="1_52fb6"]
+[ext_resource type="PackedScene" uid="uid://cme2x4jaynejy" path="res://Scenes/player.tscn" id="2_6l7je"]
+[ext_resource type="PackedScene" uid="uid://k1m6v7rtimha" path="res://Scenes/ui.tscn" id="3_jv6wh"]
+
+[node name="MainScene" type="Node2D" unique_id=547633606]
+
+[node name="Map" parent="." unique_id=666162140 instance=ExtResource("1_52fb6")]
+
+[node name="Player" parent="." unique_id=1059542720 instance=ExtResource("2_6l7je")]
+
+[node name="UI" parent="." unique_id=1625710791 instance=ExtResource("3_jv6wh")]
