@@ -8,6 +8,9 @@ size = Vector2(64, 48)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_g4v7s"]
 size = Vector2(64, 48)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(112, 80)
+
 [node name="Player" type="CharacterBody2D" unique_id=1059542720]
 script = ExtResource("1_v0iea")
 
@@ -23,3 +26,9 @@ limit_left = 0
 limit_top = 0
 limit_right = 1920
 limit_bottom = 1080
+
+[node name="InteractableArea" type="Area2D" parent="." unique_id=1452403109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1234036771]
+position = Vector2(56, 0)
+shape = SubResource("RectangleShape2D_g4v7s")
