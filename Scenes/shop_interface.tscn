@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cjxgrndrqyb25"]
+
+[ext_resource type="Script" uid="uid://cc3w0qb7kv0i5" path="res://Scripts/shop_interface.gd" id="1_t8rnt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 32
+
+[node name="ShopInterface" type="Node2D" unique_id=1660261229]
+script = ExtResource("1_t8rnt")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=684457931]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="ExitButton" type="Button" parent="." unique_id=1465505522]
+custom_minimum_size = Vector2(72, 72)
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Label" type="Label" parent="ExitButton" unique_id=152244893]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 72.0
+text = "Exit"
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

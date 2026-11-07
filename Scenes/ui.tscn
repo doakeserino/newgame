@@ -2,8 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dm80yh7q88bjk" path="res://Scenes/cards_hand.tscn" id="1_jxero"]
 [ext_resource type="Script" uid="uid://cj2u21hjnftwp" path="res://Scripts/ui.gd" id="1_qdvrb"]
+[ext_resource type="PackedScene" uid="uid://cjxgrndrqyb25" path="res://Scenes/shop_interface.tscn" id="3_nf4gj"]
 
 [node name="UI" type="Node2D" unique_id=1625710791]
 script = ExtResource("1_qdvrb")
 
 [node name="CardsHand" parent="." unique_id=1062482710 instance=ExtResource("1_jxero")]
+
+[node name="ShopInterface" parent="." unique_id=1660261229 instance=ExtResource("3_nf4gj")]
