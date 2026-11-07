@@ -9,8 +9,21 @@ gradient = SubResource("Gradient_gmcdd")
 width = 200
 height = 300
 
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 36
+font_color = Color(0.9099358, 6.256998e-07, 1.347661e-06, 1)
+
 [node name="Card" type="Node2D" unique_id=2093167092]
 script = ExtResource("1_0qqmn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=588431075]
 texture = SubResource("GradientTexture2D_gmcdd")
+
+[node name="TestLabel" type="Label" parent="." unique_id=1664124981]
+offset_left = -100.0
+offset_top = -150.0
+offset_right = 100.0
+offset_bottom = 150.0
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1
+vertical_alignment = 1

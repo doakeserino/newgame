@@ -3,8 +3,7 @@ extends BoxContainer
 var taken := false
 var card_to_add : PackedScene = preload("res://Scenes/card.tscn")
 var contents
-func _ready():
-	pass
+
 	
 func add_card(card_id : String):
 	taken = true

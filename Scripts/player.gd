@@ -6,8 +6,12 @@ const JUMP_VELOCITY = -400.0
 var alive := true
 @onready var interactable_area = $InteractableArea
 
-func _ready():
-	pass
+var bodies_in_interactable_area = []
+
+func _unhandled_input(_event):
+	if Input.is_action_just_pressed("interact"):
+		if len(bodies_in_interactable_area) > 0:
+			interact(bodies_in_interactable_area[0])
 
 func _physics_process(_delta):
 	if alive:
@@ -29,6 +33,17 @@ func process_movement() -> void:
 		interactable_area.rotation_degrees = 180
 	elif direction == Vector2.UP:
 		interactable_area.rotation_degrees = 270
-
-
 	move_and_slide()
+
+
+func _on_interactable_area_body_entered(body):
+	if body.is_in_group("friendly_npc"):
+		bodies_in_interactable_area.append(body)
+	print(bodies_in_interactable_area)
+
+func _on_interactable_area_body_exited(body):
+	if body.is_in_group("friendly_npc"):
+		bodies_in_interactable_area.erase(body)
+	print(bodies_in_interactable_area)
+func interact(body):
+	body.interacted_with()

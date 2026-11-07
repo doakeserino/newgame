@@ -8,7 +8,10 @@ var card_stats = {
 	"defense" : 10
 }
 
+@onready var test_label = $TestLabel
+
 func set_card_stats(element : String, damage : int, defense : int):
 	card_stats["element"] = element
 	card_stats["damage"] = damage
 	card_stats["defense"] = defense
+	test_label.text = element

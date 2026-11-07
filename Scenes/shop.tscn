@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c5m00y0741wfp"]
+
+[ext_resource type="Script" uid="uid://xjqpq55kmghm" path="res://Scripts/shop.gd" id="1_a0mxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(128, 128)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_yf5fn"]
+width = 128
+height = 128
+
+[node name="Shop" type="RigidBody2D" unique_id=1265295607 groups=["friendly_npc"]]
+gravity_scale = 0.0
+script = ExtResource("1_a0mxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=777736915]
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1855463085]
+texture = SubResource("NoiseTexture2D_yf5fn")

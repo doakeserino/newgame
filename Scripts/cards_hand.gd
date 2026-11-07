@@ -14,10 +14,17 @@ var cardslots = [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6]
 func _ready():
 	for card in GlobalStats.cards:
 		add_card(card)
-		add_card(card)
 
 func add_card(card_id):
 		if slot_1.taken == false:
 			slot_1.add_card(card_id)
 		elif slot_2.taken == false:
 			slot_2.add_card(card_id)
+		elif slot_3.taken == false:
+			slot_3.add_card(card_id)
+		elif slot_4.taken == false:
+			slot_4.add_card(card_id)
+		elif slot_5.taken == false:
+			slot_5.add_card(card_id)
+		elif slot_6.taken == false:
+			slot_6.add_card(card_id)

@@ -32,3 +32,6 @@ limit_bottom = 1080
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1234036771]
 position = Vector2(56, 0)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[connection signal="body_entered" from="InteractableArea" to="." method="_on_interactable_area_body_entered"]
+[connection signal="body_exited" from="InteractableArea" to="." method="_on_interactable_area_body_exited"]
