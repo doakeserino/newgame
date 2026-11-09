@@ -10,4 +10,4 @@ func add_card(card_id : String):
 	var stats_array = CardStats.card_id_dictionary[card_id]
 	contents = card_to_add.instantiate()
 	add_child(contents)
-	contents.set_card_stats(stats_array[0], stats_array[1], stats_array[2],)
+	contents.set_card_stats(stats_array[0], stats_array[1], stats_array[2], stats_array[3])

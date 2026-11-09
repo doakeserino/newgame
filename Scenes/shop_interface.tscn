@@ -3,28 +3,70 @@
 [ext_resource type="Script" uid="uid://cc3w0qb7kv0i5" path="res://Scripts/shop_interface.gd" id="1_t8rnt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
-font_size = 32
+font_size = 24
+
+[sub_resource type="Gradient" id="Gradient_t8rnt"]
+colors = PackedColorArray(0, 0, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_t8rnt")
+width = 352
+height = 824
+fill_from = Vector2(0, 1)
 
 [node name="ShopInterface" type="Node2D" unique_id=1660261229]
 script = ExtResource("1_t8rnt")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=684457931]
 offset_right = 1920.0
-offset_bottom = 1080.0
+offset_bottom = 1088.0
 color = Color(0, 0, 0, 1)
 
 [node name="ExitButton" type="Button" parent="." unique_id=1465505522]
-custom_minimum_size = Vector2(72, 72)
-offset_right = 8.0
-offset_bottom = 8.0
+custom_minimum_size = Vector2(48, 48)
+offset_left = 1864.0
+offset_top = 8.0
+offset_right = 1912.0
+offset_bottom = 56.0
 
 [node name="Label" type="Label" parent="ExitButton" unique_id=152244893]
 layout_mode = 0
-offset_right = 72.0
-offset_bottom = 72.0
+offset_right = 48.0
+offset_bottom = 48.0
 text = "Exit"
 label_settings = SubResource("LabelSettings_g4v7s")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=17093690]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 160.0
+offset_top = 72.0
+offset_right = 1760.0
+offset_bottom = 896.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1606213120]
+custom_minimum_size = Vector2(352, 824)
+custom_maximum_size = Vector2(1600, 824)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer" unique_id=1416264684]
+position = Vector2(176, 412)
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Control/HBoxContainer" unique_id=2127156240]
+position = Vector2(800, 412)
+scale = Vector2(1, 0.99999994)
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Control/HBoxContainer" unique_id=1867769347]
+position = Vector2(1424, 412)
+texture = SubResource("GradientTexture2D_g4v7s")
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

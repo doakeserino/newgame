@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://co7cstk006xwb"
+path="res://.godot/imported/card_sprite_sheet_test.aseprite-bffec8f9d689560b595c1d21b5e8ebc5.res"
+
+[deps]
+
+source_file="res://Assets/card_sprite_sheet_test.aseprite"
+dest_files=["res://.godot/imported/card_sprite_sheet_test.aseprite-bffec8f9d689560b595c1d21b5e8ebc5.res"]
+
+[params]
+

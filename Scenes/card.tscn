@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dtjryr6svwuga"]
 
 [ext_resource type="Script" uid="uid://djry17776tmmi" path="res://Scripts/card.gd" id="1_0qqmn"]
+[ext_resource type="Texture2D" uid="uid://bogcyd6vmpg04" path="res://Assets/card_sprite_sheet_test.png" id="2_wf8id"]
 
 [sub_resource type="Gradient" id="Gradient_gmcdd"]
 
@@ -12,6 +13,49 @@ height = 300
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font_size = 36
 font_color = Color(0.9099358, 6.256998e-07, 1.347661e-06, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brehn"]
+atlas = ExtResource("2_wf8id")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eumee"]
+atlas = ExtResource("2_wf8id")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6po8"]
+atlas = ExtResource("2_wf8id")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnspj"]
+atlas = ExtResource("2_wf8id")
+region = Rect2(0, 24, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnv4g"]
+atlas = ExtResource("2_wf8id")
+region = Rect2(16, 24, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brehn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eumee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6po8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnspj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnv4g")
+}],
+"loop": 1,
+"name": &"sprites",
+"speed": 5.0
+}]
 
 [node name="Card" type="Node2D" unique_id=2093167092]
 script = ExtResource("1_0qqmn")
@@ -27,3 +71,8 @@ offset_bottom = 150.0
 label_settings = SubResource("LabelSettings_g4v7s")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=567969007]
+scale = Vector2(12.5, 12.5)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"sprites"
