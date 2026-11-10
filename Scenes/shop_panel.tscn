@@ -19,15 +19,15 @@ script = ExtResource("1_fi4ek")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1850522889]
 texture = SubResource("GradientTexture2D_uveqf")
 
-[node name="BoxContainer" type="BoxContainer" parent="." unique_id=1740025658]
-offset_left = -100.0
-offset_top = -350.0
-offset_right = 100.0
-offset_bottom = -50.0
-
 [node name="Description" type="Label" parent="." unique_id=330112585]
 offset_left = -176.0
 offset_top = 200.0
 offset_right = 176.0
 offset_bottom = 412.0
 label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="StatsLabel" type="Label" parent="." unique_id=1150549854]
+offset_left = -176.0
+offset_top = -100.0
+offset_right = 176.0
+offset_bottom = 200.0

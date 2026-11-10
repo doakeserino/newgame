@@ -1,18 +1,10 @@
 [gd_scene format=3 uid="uid://cjxgrndrqyb25"]
 
 [ext_resource type="Script" uid="uid://cc3w0qb7kv0i5" path="res://Scripts/shop_interface.gd" id="1_t8rnt"]
+[ext_resource type="PackedScene" uid="uid://cpf3nqmi7oj1k" path="res://Scenes/shop_panel.tscn" id="2_tq3ty"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 font_size = 24
-
-[sub_resource type="Gradient" id="Gradient_t8rnt"]
-colors = PackedColorArray(0, 0, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
-gradient = SubResource("Gradient_t8rnt")
-width = 352
-height = 824
-fill_from = Vector2(0, 1)
 
 [node name="ShopInterface" type="Node2D" unique_id=1660261229]
 script = ExtResource("1_t8rnt")
@@ -56,17 +48,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/HBoxContainer" unique_id=1416264684]
+[node name="ShopPanel" parent="Control/HBoxContainer" unique_id=1295979478 instance=ExtResource("2_tq3ty")]
 position = Vector2(176, 412)
-texture = SubResource("GradientTexture2D_g4v7s")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Control/HBoxContainer" unique_id=2127156240]
+[node name="ShopPanel2" parent="Control/HBoxContainer" unique_id=1034441773 instance=ExtResource("2_tq3ty")]
 position = Vector2(800, 412)
-scale = Vector2(1, 0.99999994)
-texture = SubResource("GradientTexture2D_g4v7s")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Control/HBoxContainer" unique_id=1867769347]
+[node name="ShopPanel3" parent="Control/HBoxContainer" unique_id=1373316467 instance=ExtResource("2_tq3ty")]
 position = Vector2(1424, 412)
-texture = SubResource("GradientTexture2D_g4v7s")
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

@@ -8,3 +8,4 @@ var card_id_dictionary = {
 	"4" : ["water", 10, 10, 4]
 }
 # element, damage, defense, animated sprite frame
+var stat_names = ["Element", "Damage", "Defense", "Frame"]

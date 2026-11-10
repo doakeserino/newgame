@@ -19,4 +19,10 @@ func set_card_stats(element : String, damage : int, defense : int, sprite_frame 
 	card_stats["sprite_frame"] = sprite_frame
 	test_label.text = element
 	animated_sprite_2d.frame = card_stats["sprite_frame"]
-	
+func set_card_id(card_id : int):
+	card_stats["element"] = CardStats.card_id_dictionary[str(card_id)][0]
+	card_stats["damage"] = CardStats.card_id_dictionary[str(card_id)][1]
+	card_stats["defense"] = CardStats.card_id_dictionary[str(card_id)][2]
+	card_stats["sprite_frame"] = CardStats.card_id_dictionary[str(card_id)][3]
+	animated_sprite_2d.frame = card_stats["sprite_frame"]
+	print("set")
