@@ -4,8 +4,15 @@
 [ext_resource type="Script" uid="uid://cj2u21hjnftwp" path="res://Scripts/ui.gd" id="1_qdvrb"]
 [ext_resource type="PackedScene" uid="uid://cjxgrndrqyb25" path="res://Scenes/shop_interface.tscn" id="3_nf4gj"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_nf4gj"]
+
 [node name="UI" type="Node2D" unique_id=1625710791]
 script = ExtResource("1_qdvrb")
+
+[node name="StatsDisplay" type="Label" parent="." unique_id=409671097]
+offset_right = 157.0
+offset_bottom = 70.0
+label_settings = SubResource("LabelSettings_nf4gj")
 
 [node name="CardsHand" parent="." unique_id=1062482710 instance=ExtResource("1_jxero")]
 

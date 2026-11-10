@@ -13,6 +13,9 @@ fill_from = Vector2(0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_yf5fn"]
+font_size = 48
+
 [node name="ShopPanel" type="Node2D" unique_id=1295979478]
 script = ExtResource("1_fi4ek")
 
@@ -30,4 +33,22 @@ label_settings = SubResource("LabelSettings_g4v7s")
 offset_left = -176.0
 offset_top = -100.0
 offset_right = 176.0
+offset_bottom = 100.0
+
+[node name="Button" type="Button" parent="." unique_id=1380622395]
+offset_left = -100.0
+offset_top = 100.0
+offset_right = 100.0
 offset_bottom = 200.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Button" unique_id=2023265894]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 100.0
+text = "Buy"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

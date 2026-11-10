@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var cards_hand = $CardsHand
 @onready var shop_interface = $ShopInterface
+@onready var stats_display = $StatsDisplay
 
 func _ready():
 	shop_interface.visible = false
@@ -16,3 +17,5 @@ func open_shop():
 	shop_interface.visible = true
 func close_shop():
 	shop_interface.visible = false
+func update_stats_display():
+	stats_display.text = "Money: %d" % [GlobalStats.stats["money"]]
