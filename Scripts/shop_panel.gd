@@ -23,3 +23,7 @@ func display_stats(card_id : int):
 
 func _on_button_pressed():
 	GlobalStats.change_stats("money", - new_card.card_stats["cost"])
+	add_card(new_card.card_stats["sprite_frame"])
+func add_card(new_card_arg):
+		var card_to_add = str(new_card_arg) 
+		GlobalStats.add_card(card_to_add)
