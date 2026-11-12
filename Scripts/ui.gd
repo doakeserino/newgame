@@ -18,4 +18,5 @@ func open_shop():
 func close_shop():
 	shop_interface.visible = false
 func update_stats_display():
-	stats_display.text = "Money: %d" % [GlobalStats.stats["money"]]
+	for stat in GlobalStats.stats:
+		stats_display.text += stat.capitalize() + ": %d \n" % [GlobalStats.stats[stat]]

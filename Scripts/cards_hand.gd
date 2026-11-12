@@ -9,9 +9,10 @@ extends HBoxContainer
 @onready var slot_5 = $Slot5
 @onready var slot_6 = $Slot6
 
-var cardslots = [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6]
+var card_slots = [slot_1, slot_2, slot_3, slot_4, slot_5, slot_6]
 
 func _ready():
+	GlobalStats.inventory_changed.connect(add_cards_to_hand)
 	for card in GlobalStats.cards:
 		add_card(card)
 	GlobalStats.card_added.connect(recalculate_cards)
@@ -37,3 +38,11 @@ func recalculate_cards():
 	slot_6.taken = false
 	for card in GlobalStats.cards:
 		add_card(card)
+func add_cards_to_hand():
+	if len(GlobalStats.player_inventory) > len(card_slots):
+		for slot in range(0, len(card_slots)):
+			GlobalStats.cards.append(GlobalStats.player_inventory[slot])
+	else:
+		for slot in range(0, len(GlobalStats.player_inventory)):
+			GlobalStats.cards.append(GlobalStats.player_inventory[slot])
+	GlobalStats.card_added.emit()
