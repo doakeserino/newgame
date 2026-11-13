@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalStats="*uid://ccl75l0oncrww"
 CardStats="*uid://c771fa0xeissx"
+EnemyStats="*uid://c6x7jelsr78ky"
 
 [display]
 

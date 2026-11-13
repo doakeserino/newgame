@@ -6,6 +6,7 @@ signal inventory_changed
 var stats = {
 	"money" : 100,
 	"hp" : 100,
+	"energy" : 10
 	
 }
 var player_inventory = [] 
@@ -25,4 +26,3 @@ func add_cards_to_hand():
 	
 func _ready():
 	add_cards_to_hand()
-# see if length of player inv is greater than number of slots, if it is than just add cards from range of 0 to length of player inv

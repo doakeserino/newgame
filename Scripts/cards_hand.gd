@@ -39,6 +39,7 @@ func recalculate_cards():
 	for card in GlobalStats.cards:
 		add_card(card)
 func add_cards_to_hand():
+	GlobalStats.cards = []
 	if len(GlobalStats.player_inventory) > len(card_slots):
 		for slot in range(0, len(card_slots)):
 			GlobalStats.cards.append(GlobalStats.player_inventory[slot])

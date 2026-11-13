@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dsg2h3r5q6ucx"]
+
+[node name="CombatInterface" type="Node2D" unique_id=1683619478]
+
+[node name="EnemyStatsLabel" type="Label" parent="." unique_id=1045891794]
+offset_left = 1763.0
+offset_right = 1920.0
+offset_bottom = 70.0

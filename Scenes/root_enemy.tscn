@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://24nkrte4x0wb"]
+
+[ext_resource type="Script" uid="uid://dqtwyfav3vfeq" path="res://Scripts/root_enemy.gd" id="1_mme24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_343ae"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_343ae")
+
+[node name="RootEnemy" type="RigidBody2D" unique_id=2019602922]
+gravity_scale = 0.0
+script = ExtResource("1_mme24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1681957828]
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356067153]
+texture = SubResource("GradientTexture2D_g4v7s")
