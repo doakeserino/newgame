@@ -5,10 +5,11 @@
 
 [node name="CardsHand" type="HBoxContainer" unique_id=1062482710]
 custom_minimum_size = Vector2(200, 300)
-offset_left = 360.0
-offset_top = 680.0
-offset_right = 1560.0
-offset_bottom = 980.0
+offset_left = 472.0
+offset_top = 800.0
+offset_right = 1692.0
+offset_bottom = 1100.0
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_2gxi5")
 
 [node name="Slot1" parent="." unique_id=1766675901 instance=ExtResource("2_7n83j")]
