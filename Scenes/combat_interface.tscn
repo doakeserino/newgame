@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dsg2h3r5q6ucx"]
 
+[ext_resource type="Script" uid="uid://k1uh8pucfaoq" path="res://Scripts/combat_interface.gd" id="1_ti405"]
+
 [node name="CombatInterface" type="Node2D" unique_id=1683619478]
+script = ExtResource("1_ti405")
 
 [node name="EnemyStatsLabel" type="Label" parent="." unique_id=1045891794]
 offset_left = 1763.0

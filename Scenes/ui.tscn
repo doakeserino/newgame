@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dm80yh7q88bjk" path="res://Scenes/cards_hand.tscn" id="1_jxero"]
 [ext_resource type="Script" uid="uid://cj2u21hjnftwp" path="res://Scripts/ui.gd" id="1_qdvrb"]
 [ext_resource type="PackedScene" uid="uid://cjxgrndrqyb25" path="res://Scenes/shop_interface.tscn" id="3_nf4gj"]
+[ext_resource type="PackedScene" uid="uid://dsg2h3r5q6ucx" path="res://Scenes/combat_interface.tscn" id="4_2246s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nf4gj"]
 
@@ -17,3 +18,5 @@ label_settings = SubResource("LabelSettings_nf4gj")
 [node name="CardsHand" parent="." unique_id=1062482710 instance=ExtResource("1_jxero")]
 
 [node name="ShopInterface" parent="." unique_id=1660261229 instance=ExtResource("3_nf4gj")]
+
+[node name="CombatInterface" parent="." unique_id=1683619478 instance=ExtResource("4_2246s")]

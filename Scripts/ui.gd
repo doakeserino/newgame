@@ -3,10 +3,12 @@ extends Node2D
 @onready var cards_hand = $CardsHand
 @onready var shop_interface = $ShopInterface
 @onready var stats_display = $StatsDisplay
+@onready var combat_interface = $CombatInterface
 
 func _ready():
 	shop_interface.visible = false
 	shop_interface.close_shop_interface_signal.connect(close_shop)
+	combat_interface.visible = true
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("hide_card_overlay") and cards_hand.visible == true:
 		cards_hand.visible = false
@@ -20,4 +22,4 @@ func close_shop():
 func update_stats_display():
 	stats_display.text = ""
 	for stat in GlobalStats.stats:
-		stats_display.text += stat.capitalize() + ": %d \n" % [GlobalStats.stats[stat]]
+		stats_display.text += stat.capitalize() + ": %s \n" % [str(GlobalStats.stats[stat]).capitalize()]

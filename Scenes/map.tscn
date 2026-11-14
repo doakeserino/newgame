@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cxo8vhddveaux" path="res://Assets/Mars_Tileset.png" id="1_ci6au"]
 [ext_resource type="Script" uid="uid://h623wuhya4yp" path="res://Scripts/map.gd" id="1_p3ir5"]
 [ext_resource type="PackedScene" uid="uid://c5m00y0741wfp" path="res://Scenes/shop.tscn" id="2_26yhd"]
+[ext_resource type="PackedScene" uid="uid://cbgo8ikax1jix" path="res://Scenes/enemy_one.tscn" id="4_myvm1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ci6au"]
 texture = ExtResource("1_ci6au")
@@ -184,3 +185,6 @@ tile_set = SubResource("TileSet_g4v7s")
 
 [node name="Shop" parent="." unique_id=1265295607 instance=ExtResource("2_26yhd")]
 position = Vector2(1160, 556)
+
+[node name="EnemyOne" parent="." unique_id=2019602922 instance=ExtResource("4_myvm1")]
+position = Vector2(1332, 337)
