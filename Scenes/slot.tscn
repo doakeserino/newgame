@@ -2,8 +2,22 @@
 
 [ext_resource type="Script" uid="uid://dlcf4lhgd7r37" path="res://Scripts/slot.gd" id="1_luhj6"]
 
+[sub_resource type="Gradient" id="Gradient_luhj6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_57qmd"]
+gradient = SubResource("Gradient_luhj6")
+width = 200
+height = 300
+
 [node name="Slot" type="BoxContainer" unique_id=1766675901]
 custom_minimum_size = Vector2(200, 300)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 200.0
+offset_bottom = 300.0
 script = ExtResource("1_luhj6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1924352994]
+position = Vector2(100, 150)
+texture = SubResource("GradientTexture2D_57qmd")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

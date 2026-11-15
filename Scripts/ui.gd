@@ -8,7 +8,7 @@ extends Node2D
 func _ready():
 	shop_interface.visible = false
 	shop_interface.close_shop_interface_signal.connect(close_shop)
-	combat_interface.visible = true
+	combat_interface.visible = false
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("hide_card_overlay") and cards_hand.visible == true:
 		cards_hand.visible = false

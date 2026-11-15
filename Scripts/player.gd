@@ -37,12 +37,12 @@ func process_movement() -> void:
 
 
 func _on_interactable_area_body_entered(body):
-	if body.is_in_group("friendly_npc"):
+	if body.is_in_group("friendly_npc") or body.is_in_group("hostile_npc"):
 		bodies_in_interactable_area.append(body)
 	print(bodies_in_interactable_area)
 
 func _on_interactable_area_body_exited(body):
-	if body.is_in_group("friendly_npc"):
+	if body.is_in_group("friendly_npc") or body.is_in_group("hostile_npc"):
 		bodies_in_interactable_area.erase(body)
 	print(bodies_in_interactable_area)
 func interact(body):

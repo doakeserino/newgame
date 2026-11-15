@@ -11,5 +11,6 @@ script = ExtResource("1_x6ack")
 [node name="Map" parent="." unique_id=666162140 instance=ExtResource("1_52fb6")]
 
 [node name="Player" parent="." unique_id=1059542720 instance=ExtResource("2_6l7je")]
+position = Vector2(44, 42)
 
 [node name="UI" parent="." unique_id=1625710791 instance=ExtResource("3_jv6wh")]

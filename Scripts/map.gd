@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var enemy_one = $EnemyOne
 @onready var shop = $Shop
 signal open_shop_interface_signal_two
 

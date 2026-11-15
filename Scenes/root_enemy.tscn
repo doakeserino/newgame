@@ -10,7 +10,7 @@ size = Vector2(64, 64)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
 gradient = SubResource("Gradient_343ae")
 
-[node name="RootEnemy" type="RigidBody2D" unique_id=2019602922]
+[node name="RootEnemy" type="RigidBody2D" unique_id=2019602922 groups=["hostile_npc"]]
 gravity_scale = 0.0
 script = ExtResource("1_mme24")
 

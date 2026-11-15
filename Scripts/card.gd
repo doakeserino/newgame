@@ -1,6 +1,8 @@
 class_name base_card
 extends Node2D
 
+signal card_played
+
 var card_stats = {
 	"cardid" : "0",
 	"element" : null,
@@ -28,3 +30,7 @@ func set_card_id(card_id : int):
 	card_stats["sprite_frame"] = CardStats.card_id_dictionary[str(card_id)][3]
 	animated_sprite_2d.frame = card_stats["sprite_frame"]
 	print("set")
+func play_card():
+	if GlobalStats.stats["in_combat"]:
+		EnemyStats.change_enemy_stats("hp", - card_stats["damage"])
+		card_played.emit()

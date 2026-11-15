@@ -5,11 +5,13 @@ extends Node2D
 func _ready(): 
 	update_label()
 	GlobalStats.combat_entered_or_left.connect(enter_or_leave_combat)
+	EnemyStats.enemy_stats_changed.connect(update_label)
 func update_label():
+	enemy_stats_label.text = ""
 	for stat in EnemyStats.enemy_stats:
 		enemy_stats_label.text += stat.capitalize() + ": " + str(EnemyStats.enemy_stats[stat]) + "\n"
 func enter_or_leave_combat(should_enter_combat):
-	if should_enter_combat == true:
+	if should_enter_combat:
 		visible = true
 	else: 
 		visible = false
