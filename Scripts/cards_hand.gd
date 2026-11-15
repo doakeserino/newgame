@@ -16,6 +16,7 @@ func _ready():
 	for card in GlobalStats.cards:
 		add_card(card)
 	GlobalStats.card_added.connect(recalculate_cards)
+	GlobalStats.card_removed.connect(recalculate_cards)
 func add_card(card_id):
 		if slot_1.taken == false:
 			slot_1.add_card(card_id)

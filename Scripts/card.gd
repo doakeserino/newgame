@@ -34,3 +34,4 @@ func play_card():
 	if GlobalStats.stats["in_combat"]:
 		EnemyStats.change_enemy_stats("hp", - card_stats["damage"])
 		card_played.emit()
+		GlobalStats.remove_card(card_stats["cardid"])

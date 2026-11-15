@@ -4,6 +4,7 @@ signal stats_changed
 signal card_added
 signal inventory_changed
 signal combat_entered_or_left(in_combat)
+signal card_removed
 var stats = {
 	"money" : 100,
 	"hp" : 100,
@@ -31,7 +32,9 @@ func add_card(card_to_add : String):
 func add_cards_to_hand():
 	inventory_changed.emit()
 	print(player_inventory)
-	
+func remove_card(card_to_remove : String):
+	player_inventory.erase(card_to_remove)
+	card_removed.emit()
 func _ready():
 	add_cards_to_hand()
 	
