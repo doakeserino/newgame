@@ -15,7 +15,7 @@ func _ready():
 	GlobalStats.inventory_changed.connect(add_cards_to_hand)
 	for card in GlobalStats.cards:
 		add_card(card)
-	GlobalStats.card_added.connect(recalculate_cards)
+	GlobalStats.card_added.connect(add_card)
 	GlobalStats.card_removed.connect(recalculate_cards)
 func add_card(card_id):
 		if slot_1.taken == false:
@@ -47,4 +47,5 @@ func add_cards_to_hand():
 	else:
 		for slot in range(0, len(GlobalStats.player_inventory)):
 			GlobalStats.cards.append(GlobalStats.player_inventory[slot])
-	GlobalStats.card_added.emit()
+	recalculate_cards()
+	

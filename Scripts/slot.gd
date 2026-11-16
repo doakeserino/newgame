@@ -18,7 +18,7 @@ func add_card(card_id : String):
 	contents.card_played.connect(remove_card)
 func remove_card():
 	taken = false
-	contents.visible = false
+	contents.queue_free()
 
 func _on_mouse_entered():
 	if taken:

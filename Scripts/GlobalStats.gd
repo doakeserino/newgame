@@ -27,13 +27,14 @@ func change_stats(stat_name : String, amount : int):
 	stats_changed.emit()
 func add_card(card_to_add : String):
 	player_inventory.append(card_to_add)
-	card_added.emit()
+	card_added.emit(card_to_add)
 	add_cards_to_hand()
 func add_cards_to_hand():
 	inventory_changed.emit()
 	print(player_inventory)
 func remove_card(card_to_remove : String):
 	player_inventory.erase(card_to_remove)
+	inventory_changed.emit()
 	card_removed.emit()
 func _ready():
 	add_cards_to_hand()
