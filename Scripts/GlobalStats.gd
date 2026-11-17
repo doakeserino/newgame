@@ -21,9 +21,9 @@ func change_stats(stat_name : String, amount : int):
 		stats[stat_name] += amount
 	else:
 		stats[stat_name] = not stats[stat_name]
-		print("bool change worked")
-	if stat_name == "in_combat":
-		combat_entered_or_left.emit(stats["in_combat"])
+		print(stats[stat_name], "123")
+		if stat_name == "in_combat":
+			combat_entered_or_left.emit(stats["in_combat"])
 	stats_changed.emit()
 func add_card(card_to_add : String):
 	player_inventory.append(card_to_add)
@@ -36,6 +36,7 @@ func remove_card(card_to_remove : String):
 	player_inventory.erase(card_to_remove)
 	inventory_changed.emit()
 	card_removed.emit()
+	print(player_inventory)
 func _ready():
 	add_cards_to_hand()
 	

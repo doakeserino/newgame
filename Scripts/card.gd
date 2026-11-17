@@ -9,26 +9,19 @@ var card_stats = {
 	"damage" : 10,
 	"defense" : 10,
 	"sprite_frame" : 0,
-	"cost" : 10
+	"cost" : 10,
+	"energy_cost" : 0,
 }
 
 @onready var test_label = $TestLabel
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-func set_card_stats(element : String, damage : int, defense : int, sprite_frame : int, cost : int):
-	card_stats["element"] = element
-	card_stats["damage"] = damage
-	card_stats["defense"] = defense
-	card_stats["sprite_frame"] = sprite_frame
-	card_stats["cost"] = cost
-	test_label.text = element
-	animated_sprite_2d.frame = card_stats["sprite_frame"]
-func set_card_id(card_id : int):
-	card_stats["cardid"] = str(card_id)
-	card_stats["element"] = CardStats.card_id_dictionary[str(card_id)][0]
-	card_stats["damage"] = CardStats.card_id_dictionary[str(card_id)][1]
-	card_stats["defense"] = CardStats.card_id_dictionary[str(card_id)][2]
-	card_stats["sprite_frame"] = CardStats.card_id_dictionary[str(card_id)][3]
+func set_card_id(card_id : String):
+	card_stats["cardid"] = card_id
+	card_stats["element"] = CardStats.card_id_dictionary[card_id][0]
+	card_stats["damage"] = CardStats.card_id_dictionary[card_id][1]
+	card_stats["defense"] = CardStats.card_id_dictionary[card_id][2]
+	card_stats["sprite_frame"] = CardStats.card_id_dictionary[card_id][3]
 	animated_sprite_2d.frame = card_stats["sprite_frame"]
 	print("set")
 func play_card():
@@ -36,4 +29,5 @@ func play_card():
 		EnemyStats.change_enemy_stats("hp", - card_stats["damage"])
 		card_played.emit()
 		GlobalStats.remove_card(card_stats["cardid"])
+		GlobalStats.change_stats("energy", -1) # Currently hard coded, change -1 for energy cost stat on card once made
 		print("card played", card_stats["cardid"])

@@ -16,7 +16,14 @@ func _ready():
 	for card in GlobalStats.cards:
 		add_card(card)
 	GlobalStats.card_added.connect(add_card)
-	GlobalStats.card_removed.connect(recalculate_cards)
+	GlobalStats.card_removed.connect(add_cards_to_hand)
+	slot_1.card_played_extender.connect(recalculate_cards)
+	slot_2.card_played_extender.connect(recalculate_cards)
+	slot_3.card_played_extender.connect(recalculate_cards)
+	slot_4.card_played_extender.connect(recalculate_cards)
+	slot_5.card_played_extender.connect(recalculate_cards)
+	slot_6.card_played_extender.connect(recalculate_cards)
+	
 func add_card(card_id):
 		if slot_1.taken == false:
 			slot_1.add_card(card_id)
@@ -32,11 +39,23 @@ func add_card(card_id):
 			slot_6.add_card(card_id)
 func recalculate_cards():
 	slot_1.taken = false
+	if slot_1.contents:
+		slot_1.contents.queue_free()
 	slot_2.taken = false
+	if slot_2.contents:
+		slot_2.contents.queue_free()
 	slot_3.taken = false
+	if slot_3.contents:
+		slot_3.contents.queue_free()
 	slot_4.taken = false
+	if slot_4.contents:
+		slot_4.contents.queue_free()
 	slot_5.taken = false
+	if slot_5.contents:
+		slot_5.contents.queue_free()
 	slot_6.taken = false
+	if slot_6.contents:
+		slot_6.contents.queue_free()
 	for card in GlobalStats.cards:
 		add_card(card)
 func add_cards_to_hand():

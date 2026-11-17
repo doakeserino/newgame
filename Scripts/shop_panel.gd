@@ -9,7 +9,7 @@ var new_card
 func display_card(card_id : int):
 	new_card = card.instantiate()
 	add_child(new_card)
-	new_card.set_card_id(card_id)
+	new_card.set_card_id(str(card_id))
 	new_card.position.y -= 250
 	new_card.scale = Vector2(0.75, 0.75)
 	new_card.card_stats["cost"] = CardStats.card_id_dictionary[str(card_id)][4]

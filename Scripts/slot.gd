@@ -1,5 +1,6 @@
 extends BoxContainer
 
+signal card_played_extender
 var taken := false
 var card_to_add : PackedScene = preload("res://Scenes/card.tscn")
 var contents
@@ -10,16 +11,16 @@ func _unhandled_input(_event):
 		contents.play_card()
 func add_card(card_id : String):
 	taken = true
-	var stats_array = CardStats.card_id_dictionary[card_id]
 	contents = card_to_add.instantiate()
 	add_child(contents)
-	contents.set_card_stats(stats_array[0], stats_array[1], stats_array[2], stats_array[3], stats_array[4])
+	contents.set_card_id(str(card_id))
 	contents.position = Vector2(100, 150)
 	contents.card_played.connect(remove_card)
 func remove_card():
 	taken = false
 	contents.queue_free()
-
+	contents = null
+	card_played_extender.emit()
 func _on_mouse_entered():
 	if taken:
 		mouse_on_slot = true
